@@ -1,10 +1,10 @@
 
 import React from 'react';
-import DragonWarriorLobby from './components/DragonWarriorLobby';
+import CharacterSelection from './components/CharacterSelection';
 
 const App: React.FC = () => {
   return (
-    <DragonWarriorLobby />
+    <CharacterSelection />
   );
 };
 

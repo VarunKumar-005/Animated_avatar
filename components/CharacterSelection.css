@@ -1,0 +1,55 @@
+/* Styles for CharacterSelection component */
+
+.character-selection-container {
+  background-color: #020617; /* bg-slate-950 */
+  color: #ffffff; /* text-white */
+  min-height: 100vh; /* min-h-screen */
+}
+
+.character-selection-header {
+  position: fixed; /* fixed */
+  top: 0; /* top-0 */
+  left: 0; /* left-0 */
+  right: 0; /* right-0 */
+  background-color: rgba(15, 23, 42, 0.8); /* bg-slate-900/80 */
+  backdrop-filter: blur(4px); /* backdrop-blur-sm */
+  padding: 1rem; /* p-4 */
+  display: flex; /* flex */
+  justify-content: space-between; /* justify-between */
+  align-items: center; /* items-center */
+  z-index: 50; /* z-50 */
+}
+
+.header-title {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 700; /* font-bold */
+}
+
+.main-grid {
+  display: grid; /* grid */
+  grid-template-columns: repeat(12, minmax(0, 1fr)); /* grid-cols-12 */
+  gap: 1rem; /* gap-4 */
+  height: 100vh; /* h-screen */
+  padding-top: 4rem; /* pt-16, assuming 1rem = 4 units */
+}
+
+.left-column {
+  grid-column: span 3 / span 3; /* col-span-3 */
+}
+
+.center-column {
+  grid-column: span 6 / span 6; /* col-span-6 */
+}
+
+.right-column {
+  grid-column: span 3 / span 3; /* col-span-3 */
+}
+
+.close-button {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 700; /* font-bold */
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}

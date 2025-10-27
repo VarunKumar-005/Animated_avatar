@@ -1,0 +1,64 @@
+/* Styles for CharacterList component */
+
+.character-list-container {
+  padding: 1rem; /* p-4 */
+}
+
+.character-list-heading {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 700; /* font-bold */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.character-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.character-list > li + li {
+  margin-top: 0.5rem; /* space-y-2 */
+}
+
+.character-button {
+  width: 100%; /* w-full */
+  text-align: left; /* text-left */
+  padding: 0.5rem; /* p-2 */
+  border-radius: 0.5rem; /* rounded-lg */
+  transition: background-color 150ms ease-in-out; /* transition-colors */
+  display: flex; /* flex */
+  align-items: center; /* items-center */
+  gap: 1rem; /* gap-4 */
+  background-color: #1e293b; /* bg-slate-800 */
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.character-button:hover {
+  background-color: #334155; /* hover:bg-slate-700 */
+}
+
+.character-button.selected {
+  background-color: #7c3aed; /* bg-purple-600 */
+}
+
+.character-avatar {
+  width: 3rem; /* w-12 */
+  height: 3rem; /* h-12 */
+  border-radius: 0.375rem; /* rounded-md */
+  flex-shrink: 0; /* flex-shrink-0 */
+}
+
+.character-info {
+  /* No specific styles needed for the container div */
+}
+
+.character-name {
+  font-weight: 600; /* font-semibold */
+}
+
+.character-role {
+  font-size: 0.75rem; /* text-xs */
+  color: #9ca3af; /* text-gray-400 */
+}

@@ -1,0 +1,6 @@
+/* Styles for CharacterViewer component */
+
+.character-viewer-canvas {
+  width: 100%; /* w-full */
+  height: 100%; /* h-full */
+}
