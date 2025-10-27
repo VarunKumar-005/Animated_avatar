@@ -1,0 +1,5 @@
+{
+  "name": "AR/VR Learning Avatars",
+  "description": "An interactive 3D avatar selection screen for an AR/VR learning platform. Users can browse different avatar guides, view their skills, and select their companion in a visually stunning, animated interface.",
+  "requestFramePermissions": []
+}
