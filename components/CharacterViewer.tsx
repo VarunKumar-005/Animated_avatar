@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from 'react';
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import type { Character } from '../types';
 import './CharacterViewer.css';
 
@@ -10,12 +12,6 @@ const CharacterViewer: React.FC<CharacterViewerProps> = ({ character }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const THREE = (window as any).THREE;
-    if (!THREE) {
-      console.error("Three.js has not been loaded.");
-      return;
-    }
-
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -36,9 +32,9 @@ const CharacterViewer: React.FC<CharacterViewerProps> = ({ character }) => {
     keyLight.position.set(3, 4, 2);
     scene.add(keyLight);
 
-    const loader = new THREE.GLTFLoader();
-    let mixer: any;
-    loader.load(character.modelPath, (gltf: any) => {
+    const loader = new GLTFLoader();
+    let mixer: THREE.AnimationMixer;
+    loader.load(character.modelPath, (gltf) => {
       const model = gltf.scene;
       const animations = gltf.animations;
 
@@ -56,21 +52,6 @@ const CharacterViewer: React.FC<CharacterViewerProps> = ({ character }) => {
         mixer = new THREE.AnimationMixer(model);
         const action = mixer.clipAction(animations[0]);
         action.play();
-      }
-
-      model.visible = false;
-      const gsap = (window as any).gsap;
-      if (gsap) {
-        gsap.to(model.rotation, {
-          duration: 1,
-          y: Math.PI * 2,
-          ease: 'power2.inOut',
-          onStart: () => {
-            model.visible = true;
-          }
-        });
-      } else {
-        model.visible = true;
       }
     });
 
