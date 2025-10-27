@@ -20,5 +20,23 @@ export const CHARACTERS: Character[] = [
     modelPath: 'https://varunkumar-005.github.io/animate/echo.fbx',
     isPremium: true,
     price: 25
+  },
+  {
+    id: 'riko',
+    name: 'Riko',
+    role: 'Engineer',
+    skills: { engineering: 90, problem_solving: 85, mathematics: 95 },
+    specialty: 'Architecting complex AR/VR systems and optimizing performance.',
+    color: '#38bdf8',
+    modelPath: 'https://cdn.jsdelivr.net/gh/dev-gaur/3d-assets/Riko.glb'
+  },
+  {
+    id: 'avar',
+    name: 'Avar',
+    role: 'Ninja',
+    skills: { stealth: 95, agility: 90, combat: 85 },
+    specialty: 'Executing tasks with precision and efficiency in high-stakes scenarios.',
+    color: '#e11d48',
+    modelPath: 'https://cdn.jsdelivr.net/gh/dev-gaur/3d-assets/avar-_the_cyborg_ninja_-low-poly.glb'
   }
 ];
