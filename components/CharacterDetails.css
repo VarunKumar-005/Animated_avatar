@@ -1,0 +1,93 @@
+/* Styles for CharacterDetails component */
+
+.character-details-container {
+  padding: 1rem; /* p-4 */
+}
+
+.character-details-name {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700; /* font-bold */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.character-details-role {
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 600; /* font-semibold */
+  padding: 0.25rem 0.75rem; /* px-3 py-1 */
+  border-radius: 9999px; /* rounded-full */
+  display: inline-block;
+}
+
+.specialty-section {
+  margin-top: 1.5rem; /* my-6 */
+  margin-bottom: 1.5rem; /* my-6 */
+}
+
+.specialty-heading {
+  font-size: 0.75rem; /* text-xs */
+  color: #6b7280; /* text-gray-500 */
+  text-transform: uppercase; /* uppercase */
+  letter-spacing: 0.05em; /* tracking-wider */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.specialty-text {
+  font-size: 0.875rem; /* text-sm */
+  color: #d1d5db; /* text-gray-300 */
+}
+
+.skills-container {
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.skills-container > div + div {
+  margin-top: 0.75rem; /* space-y-3 */
+}
+
+.skill-label-value {
+  display: flex; /* flex */
+  justify-content: space-between; /* justify-between */
+  font-size: 0.875rem; /* text-sm */
+  margin-bottom: 0.25rem; /* mb-1 */
+}
+
+.skill-label {
+  color: #9ca3af; /* text-gray-400 */
+  text-transform: capitalize; /* capitalize */
+}
+
+.skill-value {
+  color: #ffffff; /* text-white */
+  font-weight: 600; /* font-semibold */
+}
+
+.skill-bar-bg {
+  height: 0.375rem; /* h-1.5 */
+  background-color: #1e293b; /* bg-slate-800 */
+  border-radius: 9999px; /* rounded-full */
+  overflow: hidden; /* overflow-hidden */
+}
+
+.skill-bar-fg {
+  height: 100%; /* h-full */
+  border-radius: 9999px; /* rounded-full */
+  transition-property: all; /* transition-all */
+  transition-duration: 500ms; /* duration-500 */
+}
+
+.equip-button {
+  width: 100%; /* w-full */
+  padding: 0.75rem 0; /* py-3 */
+  border-radius: 0.5rem; /* rounded-lg */
+  font-weight: 600; /* font-semibold */
+  color: #ffffff; /* text-white */
+  transition-property: all; /* transition-all */
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  border: none;
+  cursor: pointer;
+}
+
+.equip-button:hover {
+  transform: scale(1.05); /* hover:scale-105 */
+}
