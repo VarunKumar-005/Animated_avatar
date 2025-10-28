@@ -43,6 +43,10 @@ const CharacterViewer: React.FC<CharacterViewerProps> = ({ character }) => {
       const scale = 1.8 / size.y;
       model.scale.set(scale, scale, scale);
 
+      if (character.position) {
+        model.position.add(new THREE.Vector3(character.position.x, character.position.y, character.position.z));
+      }
+
       const center = box.getCenter(new THREE.Vector3());
       model.position.sub(center).setY(-box.min.y * scale);
 

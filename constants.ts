@@ -10,7 +10,8 @@ export const CHARACTERS: Character[] = [
     color: '#f59e0b', // amber
     modelPath: 'girl.glb',
     isPremium: true,
-    price: 25
+    price: 25,
+    position: { x: 0, y: -0.2, z: 0 }
   },
   {
 
